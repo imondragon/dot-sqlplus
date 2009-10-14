@@ -1,20 +1,12 @@
 
-SET TERMOUT OFF
-set sqlprompt '&_CONNECT_IDENTIFIER > ';
+ALTER SESSION SET nls_date_format = "mm/dd/yyyy hh24:mi:ss";
 
-/*
-DEFINE sqlprompt=none
-COLUMN sqlprompt NEW_VALUE sqlprompt
-
-SELECT USER || '@' || NVL('&_CONNECT_IDENTIFIER', global_name )
-sqlprompt
-FROM global_name;
-
-SET SQLPROMPT '&sqlprompt> '
-*/
+set sqlprompt "_USER'@'_CONNECT_IDENTIFIER > ";
 
 SET TIMING ON
 SET SERVEROUTPUT ON
 SET TERMOUT ON
-SET LINESIZE 200
-SET PAGESIZE 100
+SET PAGESIZE 24
+SET LINESIZE 78
+
+
